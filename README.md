@@ -23,6 +23,8 @@ Go to created directory:
 cd Detection
 ```
 
+Install PyTorch using [instruction from official site](https://pytorch.org/get-started/locally/)
+
 Install necessary libraries using pip:
 
 ```
