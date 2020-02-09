@@ -33,7 +33,7 @@ Run local web server:
 
 ```
 python app.py
-
+```
 
 ### Usage
 
