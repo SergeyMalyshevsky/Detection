@@ -23,7 +23,15 @@ Go to created directory:
 cd Detection
 ```
 
+Create and activate virtual environment:
+
+```
+python3 -m venv venv
+source venv/bin/Activate
+```
+
 Install PyTorch using [instruction from official site](https://pytorch.org/get-started/locally/)
+
 
 Install necessary libraries using pip:
 
@@ -39,6 +47,7 @@ python app.py
 
 ### Usage
 
+Open your browser and go to address http://localhost:5000/.
 Download image you want to detect objects from. Check that it is your image. Run detection proccess by pushing button.
 
 ## Built With
