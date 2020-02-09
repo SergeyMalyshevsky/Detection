@@ -32,7 +32,11 @@ def detection():
         image_file = request.form['image_file']
         if image_file:
             filename = image_file
-            detect_people(filename)
+            try:
+                detect_people(filename)
+            except Exception:
+                pass
+
             return render_template('./result.html', image_file=filename)
 
 

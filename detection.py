@@ -1,9 +1,13 @@
 import cv2
 import torch
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 import torchvision
+from torchvision.models.detection.faster_rcnn import model_urls
 from torchvision.models.detection.faster_rcnn import FastRCNNPredictor
+
+matplotlib.use('Agg')
 
 
 def get_label_values_from_file(filename):
@@ -51,6 +55,7 @@ def detect_people(filename):
     output_folder = './static/output/'
 
     # load a model pre-trained pre-trained on COCO
+    model_urls['fasterrcnn_resnet50_fpn_coco'] = model_urls['fasterrcnn_resnet50_fpn_coco'].replace('https://', 'http://')
     model = torchvision.models.detection.fasterrcnn_resnet50_fpn(pretrained=True, num_classes=91)
 
     img_path = input_folder + filename
